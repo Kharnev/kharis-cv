@@ -60,10 +60,6 @@ export const skills = [
     title: "Others",
     skills: [
       {
-        name: "Git",
-        image: "",
-      },
-      {
         name: "GitHub",
         image:
           "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
@@ -72,18 +68,6 @@ export const skills = [
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      },
-      {
-        name: "Adobe XD",
-        image: "",
-      },
-      {
-        name: "Figma",
-        image: "https://www.pngwing.com/id/search?q=logo+figma",
-      },
-      {
-        name: "C#",
-        image: "",
       },
     ],
   },

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImage from "../Images/HeroImage.jpg";
 import HeroBgAnimation from "../HeroBgAnimation";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -148,39 +148,6 @@ const SubTitle = styled.div`
   }
 `;
 
-const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-decoration: none;
-  width: 95%;
-  max-width: 300px;
-  text-align: center;
-  padding: 16px 0;
-  color: ${({ theme }) => theme.white};
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 600;
-  transition: all 0.2s ease-in-out !important;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  box-shadow: 20px 20px 60px #1F2634, -20px 20px 60px #1F2634;
-  &:hover {
-    transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow: 20px 20px 60px #1F2634,
-    filter: brightness(1);
-  }
-
-  @media (max-width: 640px) {
-  padding: 12px 0;
-  font-size: 18px;
-  }
-`;
-
 const Image = styled.img`
   width: 100%;
   height: 100%;
@@ -202,6 +169,15 @@ const Image = styled.img`
 `;
 
 const Hero = () => {
+  const [Hero, setHero] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const HeroRef = ref(db, "Hero");
+    onValue(HeroRef, (snapshot) => {
+      const data = snapshot.val();
+      setHero(data);
+    });
+  }, []);
   return (
     <div id="about">
       <HeroContainer>
@@ -229,7 +205,7 @@ const Hero = () => {
             <SubTitle>{Bio.description}</SubTitle>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Image src={HeroImage} alt="Hero" />
+            <Image src={`data:image/jpg;base64,${Hero.image1}`} alt="Hero" />
           </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
