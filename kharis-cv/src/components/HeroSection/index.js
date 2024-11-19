@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImage from "../../images/HeroImage.jpg";
+import HeroImage from "../Images/HeroImage.jpg";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -180,6 +180,26 @@ const ResumeButton = styled.a`
   }
 `;
 
+const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid ${({ theme }) => theme.primary};
+  @media (max-width: 768px) {
+    max-width: 400px;
+    max-height: 400px;
+  }
+  @media screen and (max-width: 640px) {
+    max-width: 280px;
+    max-height: 280px;
+  }
+`;
+
 const Hero = () => {
   return (
     <div id="about">
@@ -208,7 +228,9 @@ const Hero = () => {
               Check Resume
             </ResumeButton>
           </HeroLeftContainer>
-          <HeroRightContainer></HeroRightContainer>
+          <HeroRightContainer>
+            <Image src={HeroImage} alt="Hero" />
+          </HeroRightContainer>
         </HeroInnerContainer>
       </HeroContainer>
     </div>
