@@ -227,9 +227,6 @@ const Hero = () => {
               </Span>
             </TextLoop>
             <SubTitle>{Bio.description}</SubTitle>
-            <ResumeButton href={Bio.resume} target="display">
-              Check Resume
-            </ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
             <Image src={HeroImage} alt="Hero" />
