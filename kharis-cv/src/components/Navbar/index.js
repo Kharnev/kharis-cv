@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link as LinkR } from "react-router-dom";
 import styled, { useTheme } from "styled-components";
 import { DiCssdeck } from "react-icons/di";
 import { FaBars } from "react-icons/fa";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -139,6 +140,15 @@ const MobileMenuLinks = styled(LinkR)`
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+  const [navbar, setNavbar] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const navbarRef = ref(db, "navbar");
+    onValue(navbarRef, (snapshot) => {
+      const data = snapshot.val();
+      setNavbar(data);
+    });
+  }, []);
 
   return (
     <Nav>
@@ -153,7 +163,7 @@ const Navbar = () => {
               cursor: "pointer",
             }}
           >
-            <DiCssdeck size="3rem" /> <Span>Portfolio</Span>
+            <DiCssdeck size="3rem" /> <Span>{navbar.Judul}</Span>
           </a>
         </NavLogo>
         <MobileIcon>
@@ -164,11 +174,11 @@ const Navbar = () => {
           />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#about">{navbar.navbar1}</NavLink>
+          <NavLink href="#skills">{navbar.navbar2}</NavLink>
+          <NavLink href="#experience">{navbar.navbar3}</NavLink>
+          <NavLink href="#projects">{navbar.navbar4}</NavLink>
+          <NavLink href="#education">{navbar.navbar5}</NavLink>
         </NavItems>
       </NavContainer>
       {open && (
@@ -222,9 +232,7 @@ const Navbar = () => {
             }}
             href="/"
             target="_blank"
-          >
-            Github Profile
-          </GithubButton>
+          ></GithubButton>
         </MobileMenu>
       )}
     </Nav>
