@@ -79,18 +79,6 @@ const NavLink = styled.a`
   }
 `;
 
-const ButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 80%;
-  height: 100%;
-  padding: 0 6px;
-  @media screen and (max-width: 640px) {
-    display: none;
-  }
-`;
-
 const GithubButton = styled.button`
   border: 1.8px solid ${({ theme }) => theme.primary};
   border-radius: 20px;
@@ -151,6 +139,7 @@ const MobileMenuLinks = styled(LinkR)`
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
   const theme = useTheme();
+
   return (
     <Nav>
       <NavContainer>
@@ -181,9 +170,6 @@ const Navbar = () => {
           <NavLink href="#projects">Projects</NavLink>
           <NavLink href="#education">Education</NavLink>
         </NavItems>
-        <ButtonContainer>
-          <GithubButton>Github Profile</GithubButton>
-        </ButtonContainer>
       </NavContainer>
       {open && (
         <MobileMenu open={open}>
