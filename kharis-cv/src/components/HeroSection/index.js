@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImage from "../Images/HeroImage.jpg";
+import HeroBgAnimation from "../HeroBgAnimation";
 
 const HeroContainer = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -32,7 +33,7 @@ const HeroBg = styled.div`
   bottom: 0;
   left: 50%;
   overflow: hidden;
-  width: 100%;
+  width: 72%;
   height: 100%;
   padding: 0 30px;
   -webkit-transform: translateX(-50%) translateY(-50%);
@@ -204,7 +205,9 @@ const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <HeroBg></HeroBg>
+        <HeroBg>
+          <HeroBgAnimation />
+        </HeroBg>
         <HeroInnerContainer>
           <HeroLeftContainer>
             <Title>
