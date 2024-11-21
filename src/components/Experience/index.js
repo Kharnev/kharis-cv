@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -8,6 +8,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import ExperienceCard from "../Cards/ExperienceCard";
 import { experiences } from "../../data/constants";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Container = styled.div`
   display: flex;
@@ -71,17 +72,21 @@ const TimelineSection = styled.div`
   gap: 12px;
 `;
 
-const index = () => {
+const Experience = () => {
+  const [Experience, setExperience] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const ExperienceRef = ref(db, "Experience");
+    onValue(ExperienceRef, (snapshot) => {
+      const data = snapshot.val();
+      setExperience(data);
+    });
+  }, []);
   return (
     <Container id="experience">
       <Wrapper>
-        <Title>Experience</Title>
-        <Desc>
-          Perjalanan akademis saya telah memungkinkan saya mengembangkan
-          keterampilan komputer saya melalui proyek kampus dan kursus. Saya
-          memperoleh pengalaman mengerjakan berbagai proyek, menerapkan
-          pengetahuan saya dalam skenario praktis.
-        </Desc>
+        <Title>{Experience.expe1}</Title>
+        <Desc>{Experience.expe2}</Desc>
         <TimelineSection>
           <Timeline>
             {experiences.map((experience, index) => (
@@ -104,4 +109,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Experience;
