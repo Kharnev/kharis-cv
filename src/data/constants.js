@@ -1,13 +1,8 @@
 export const Bio = {
   name: "Kharis Neville Awuy",
-  roles: [
-    "Dekstop Application Development",
-    "Web Designer",
-    "UI/UX Designer",
-    "Programmer",
-  ],
+  roles: ["Dekstop Application Development", "Web Designer", "UI/UX Designer"],
   description:
-    "I am an enthusiastic and adaptable computer science student with a strong passion for technology and innovation. Always eager to learn and grow, I strive to apply my knowledge and skills to solve real-world problems. With a positive attitude and a commitment to continuous improvement, I am excited to take on new challenges and contribute meaningfully to projects and teams.",
+    "Saya adalah mahasiswa ilmu komputer yang antusias dan mudah beradaptasi dengan hasrat yang kuat terhadap teknologi dan inovasi. Selalu bersemangat untuk belajar dan berkembang, saya berusaha menerapkan pengetahuan dan keterampilan saya untuk memecahkan masalah di dunia nyata. Dengan sikap positif dan komitmen terhadap peningkatan berkelanjutan, saya bersemangat untuk menghadapi tantangan baru dan berkontribusi secara berarti terhadap proyek dan tim.",
   github: "https://github.com/Kharnev",
 };
 
@@ -34,25 +29,30 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
-      {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
     ],
   },
   {
-    title: "Android",
+    title: "UI/UX Designer",
     skills: [
       {
-        name: "Java",
+        name: "Figma",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Figma-dynamic-color.png/640px-Figma-dynamic-color.png",
       },
       {
-        name: "XML",
+        name: "Adobe XD",
         image:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBMw6_RdwKQ9bDFfnKDX1iwMl4bVJEvd9PP53XuIw&s",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/640px-Adobe_XD_CC_icon.svg.png",
+      },
+      {
+        name: "Canva",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Canva_icon_2021.svg/640px-Canva_icon_2021.svg.png",
+      },
+      {
+        name: "CSS",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/640px-CSS3_logo.svg.png",
       },
     ],
   },
@@ -68,6 +68,21 @@ export const skills = [
         name: "VS Code",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
+      },
+      {
+        name: "C#",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/640px-Logo_C_sharp.svg.png",
+      },
+      {
+        name: "GitHub",
+        image:
+          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+      },
+      {
+        name: "GitHub",
+        image:
+          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
       },
     ],
   },
