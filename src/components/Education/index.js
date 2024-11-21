@@ -16,7 +16,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  padding: 0px 0px 60px 0px;
+  padding: 0px 0px 120px 0px;
   @media (max-width: 960px) {
     padding: 0px;
   }
@@ -80,14 +80,14 @@ const index = () => {
       <Wrapper>
         <Title>Education</Title>
         <Desc>
-          My education has been a journey of self-discovery and growth. My
-          educational details are as follows.
+          Pendidikan saya merupakan perjalanan menemukan jati diri dan
+          pertumbuhan. Rincian pendidikan saya adalah sebagai berikut.
         </Desc>
         <TimelineSection>
           <Timeline>
             {education.map((education, index) => (
               <TimelineItem>
-                <TimelineContent sx={{ py: "12px", px: 2 }}>
+                <TimelineContent sx={{ py: "40px", px: 2 }}>
                   <EducationCard education={education} />
                 </TimelineContent>
                 <TimelineSeparator>

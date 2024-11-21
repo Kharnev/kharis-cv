@@ -136,22 +136,22 @@ export const education = [
     id: 0,
     school: "Klabat University",
     date: "2022 - Now",
-    grade: "",
-    desc: "I am studying at Klabat University majoring in Informatics Engineering. And now I am in semester 5.",
+    grade: " - ",
+    desc: "Saat ini, saya sedang menempuh pendidikan di Fakultas Ilmu Komputer. Diterima di fakultas ini merupakan momen yang membanggakan bagi saya, dan hal ini telah memacu tekad saya untuk berprestasi di bidang ini. Dengan komitmen yang kuat dan kerja keras, saya berusaha untuk memanfaatkan kesempatan ini sebaik-baiknya, dengan tujuan untuk lulus dengan hasil yang luar biasa dan mewariskan ilmu dan keterampilan yang telah saya peroleh untuk memberikan dampak yang berarti di dunia teknologi.",
   },
   {
     id: 1,
     school: "SMA Negeri 1 Airmadidi",
     date: "2019 - 2022",
     grade: "88.2%",
-    desc: "I finished my high school at State High School 1 Airmadidi.",
+    desc: "Saya berhasil lulus SMA dengan visi yang jelas untuk masa depan saya. Selama tahun-tahun formatif tersebut, saya mengembangkan tekad yang kuat untuk mengejar pendidikan tinggi dan memfokuskan studi saya pada bidang informatika. Ketertarikan saya pada teknologi, yang dipupuk selama bertahun-tahun, memperkuat keputusan saya untuk mendalami lebih jauh dunia komputasi, pemrograman, dan inovasi. Aspirasi ini menjadi motivasi utama saya, mendorong saya untuk mempersiapkan diri secara akademis dan mental untuk perjalanan menuju dunia informatika yang dinamis dan terus berkembang di universitas.",
   },
   {
     id: 2,
     school: "SMP Negeri 2 Airmadidi",
     date: "2016 - 2019",
     grade: "92.3%",
-    desc: "I finished my junior high school very well. And since junior high school I have also been introduced to technology.",
+    desc: "Selama masa SMP, saya tidak hanya meraih keberhasilan akademis, tetapi juga menemukan minat yang semakin besar terhadap dunia teknologi. Selama periode inilah saya pertama kali diperkenalkan dengan dunia komputer, perangkat lunak, dan perangkat digital yang menakjubkan. Pemaparan awal ini memicu rasa ingin tahu dan hasrat yang mendalam untuk memahami cara kerja teknologi dan bagaimana teknologi dapat diterapkan untuk memecahkan masalah di dunia nyata.",
   },
 ];
 
