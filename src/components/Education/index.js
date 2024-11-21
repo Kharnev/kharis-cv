@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
@@ -8,6 +8,7 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { education, experiences } from "../../data/constants";
 import EducationCard from "../Cards/EducationCard.jsx";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Container = styled.div`
   display: flex;
@@ -74,15 +75,21 @@ const TimelineSection = styled.div`
   }
 `;
 
-const index = () => {
+const Education = () => {
+  const [Education, setEducation] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const EducationRef = ref(db, "Education");
+    onValue(EducationRef, (snapshot) => {
+      const data = snapshot.val();
+      setEducation(data);
+    });
+  }, []);
   return (
     <Container id="education">
       <Wrapper>
-        <Title>Education</Title>
-        <Desc>
-          Pendidikan saya merupakan perjalanan menemukan jati diri dan
-          pertumbuhan. Rincian pendidikan saya adalah sebagai berikut.
-        </Desc>
+        <Title>{Education.edu1}</Title>
+        <Desc>{Education.edu2}</Desc>
         <TimelineSection>
           <Timeline>
             {education.map((education, index) => (
@@ -105,4 +112,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Education;
