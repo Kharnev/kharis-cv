@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { useState } from "react";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Container = styled.div`
   display: flex;
@@ -92,23 +92,28 @@ const CardContainer = styled.div`
 
 const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState("all");
+  const [Projects, setProjects] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const ProjectsRef = ref(db, "Projects");
+    onValue(ProjectsRef, (snapshot) => {
+      const data = snapshot.val();
+      setProjects(data);
+    });
+  }, []);
   return (
     <Container id="projects">
       <Wrapper>
-        <Title>Projects</Title>
-        <Desc>
-          Saya telah berhasil merancang aplikasi web dan seluler, mengembangkan
-          aplikasi desktop, dan mengerjakan beberapa proyek lain di berbagai
-          platform.
-        </Desc>
+        <Title>{Projects.pro1}</Title>
+        <Desc>{Projects.pro2}</Desc>
         <ToggleButtonGroup>
           {toggle === "all" ? (
             <ToggleButton active value="all" onClick={() => setToggle("all")}>
-              All
+              {Projects.pro3}
             </ToggleButton>
           ) : (
             <ToggleButton value="all" onClick={() => setToggle("all")}>
-              All
+              {Projects.pro4}
             </ToggleButton>
           )}
           <Divider />
@@ -118,14 +123,14 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="web designer"
               onClick={() => setToggle("web designer")}
             >
-              WEB DESIGNER
+              {Projects.pro5}
             </ToggleButton>
           ) : (
             <ToggleButton
               value="web designer"
               onClick={() => setToggle("web designer")}
             >
-              WEB DESIGNER
+              {Projects.pro6}
             </ToggleButton>
           )}
           <Divider />
@@ -135,14 +140,14 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              ANDROID DESIGNER
+              {Projects.pro7}
             </ToggleButton>
           ) : (
             <ToggleButton
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              ANDROID DESIGNER
+              {Projects.pro8}
             </ToggleButton>
           )}
           <Divider />
@@ -152,14 +157,14 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="dekstop application"
               onClick={() => setToggle("dekstop application")}
             >
-              DEKSTOP APPLICATION
+              {Projects.pro9}
             </ToggleButton>
           ) : (
             <ToggleButton
               value="dekstop application"
               onClick={() => setToggle("dekstop application")}
             >
-              DEKSTOP APPLICATION
+              {Projects.pro10}
             </ToggleButton>
           )}
         </ToggleButtonGroup>
