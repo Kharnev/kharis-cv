@@ -3,7 +3,10 @@ export const Bio = {
   roles: ["Dekstop Application Development", "Web Designer", "UI/UX Designer"],
   description:
     "Saya adalah mahasiswa ilmu komputer yang antusias dan mudah beradaptasi dengan hasrat yang kuat terhadap teknologi dan inovasi. Selalu bersemangat untuk belajar dan berkembang, saya berusaha menerapkan pengetahuan dan keterampilan saya untuk memecahkan masalah di dunia nyata. Dengan sikap positif dan komitmen terhadap peningkatan berkelanjutan, saya bersemangat untuk menghadapi tantangan baru dan berkontribusi secara berarti terhadap proyek dan tim.",
-  github: "https://github.com/Kharnev",
+  wa: "https://wa.link/6yeysx",
+  insta:
+    "https://www.instagram.com/neville__6/profilecard/?igsh=MXR0aDNrZ2NvZGVpaw==",
+  facebook: "https://www.facebook.com/profile.php?id=61551513143842",
 };
 
 export const skills = [
