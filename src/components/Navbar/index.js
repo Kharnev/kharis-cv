@@ -189,7 +189,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            About
+            {navbar.navbar6}
           </MobileMenuLinks>
           <MobileMenuLinks
             href="#skills"
@@ -197,7 +197,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            Skills
+            {navbar.navbar7}
           </MobileMenuLinks>
           <MobileMenuLinks
             href="#experience"
@@ -205,7 +205,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            Experience
+            {navbar.navbar8}
           </MobileMenuLinks>
           <MobileMenuLinks
             href="#projects"
@@ -213,7 +213,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            Projects
+            {navbar.navbar9}
           </MobileMenuLinks>
           <MobileMenuLinks
             href="#education"
@@ -221,7 +221,7 @@ const Navbar = () => {
               setOpen(!open);
             }}
           >
-            Education
+            {navbar.navbar10}
           </MobileMenuLinks>
           <GithubButton
             style={{
