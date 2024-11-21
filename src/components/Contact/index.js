@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Container = styled.div`
   display: flex;
@@ -132,6 +133,15 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
+  const [Contact, setContact] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const ContactRef = ref(db, "Contact");
+    onValue(ContactRef, (snapshot) => {
+      const data = snapshot.val();
+      setContact(data);
+    });
+  }, []);
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
@@ -158,11 +168,8 @@ const Contact = () => {
   return (
     <Container>
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>
-          Jangan ragu untuk menghubungi saya untuk pertanyaan atau saran apa
-          pun!
-        </Desc>
+        <Title>{Contact.con1}</Title>
+        <Desc>{Contact.con2}</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
