@@ -187,11 +187,12 @@ const Hero = () => {
         <HeroInnerContainer>
           <HeroLeftContainer>
             <Title>
-              Hi, I am <br />
-              {Bio.name}
+              {Hero.title1}
+              <br />
+              {Hero.title2}
             </Title>
             <TextLoop>
-              I am a
+              {Hero.title3}
               <Span>
                 <Typewriter
                   options={{
@@ -202,7 +203,7 @@ const Hero = () => {
                 />
               </Span>
             </TextLoop>
-            <SubTitle>{Bio.description}</SubTitle>
+            <SubTitle>{Hero.title4}</SubTitle>
           </HeroLeftContainer>
           <HeroRightContainer>
             <Image src={`data:image/jpg;base64,${Hero.image1}`} alt="Hero" />
