@@ -52,7 +52,7 @@ const Title = styled.div`
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
-  max-width: 600px;
+  max-width: 1000px;
   color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -77,8 +77,10 @@ const index = () => {
       <Wrapper>
         <Title>Experience</Title>
         <Desc>
-          My work experience as a software engineer and working on different
-          companies and projects.
+          Perjalanan akademis saya telah memungkinkan saya mengembangkan
+          keterampilan komputer saya melalui proyek kampus dan kursus. Saya
+          memperoleh pengalaman mengerjakan berbagai proyek, menerapkan
+          pengetahuan saya dalam skenario praktis.
         </Desc>
         <TimelineSection>
           <Timeline>
