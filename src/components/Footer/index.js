@@ -104,6 +104,7 @@ function Footer() {
           <NavLink href="#experience">{Footer.foo4}</NavLink>
           <NavLink href="#projects">{Footer.foo5}</NavLink>
           <NavLink href="#education">{Footer.foo6}</NavLink>
+          <NavLink href="#contact">{Footer.foo8}</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
