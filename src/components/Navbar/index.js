@@ -179,6 +179,7 @@ const Navbar = () => {
           <NavLink href="#experience">{navbar.navbar3}</NavLink>
           <NavLink href="#projects">{navbar.navbar4}</NavLink>
           <NavLink href="#education">{navbar.navbar5}</NavLink>
+          <NavLink href="#contact">{navbar.navbar6}</NavLink>
         </NavItems>
       </NavContainer>
       {open && (
@@ -222,6 +223,14 @@ const Navbar = () => {
             }}
           >
             {navbar.navbar10}
+          </MobileMenuLinks>
+          <MobileMenuLinks
+            href="#contact"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {navbar.navbar11}
           </MobileMenuLinks>
           <GithubButton
             style={{
