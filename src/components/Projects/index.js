@@ -97,8 +97,9 @@ const Projects = ({ openModal, setOpenModal }) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          I have worked on a wide range of projects. From web apps to android
-          apps. Here are some of my projects.
+          Saya telah berhasil merancang aplikasi web dan seluler, mengembangkan
+          aplikasi desktop, dan mengerjakan beberapa proyek lain di berbagai
+          platform.
         </Desc>
         <ToggleButtonGroup>
           {toggle === "all" ? (
@@ -111,17 +112,20 @@ const Projects = ({ openModal, setOpenModal }) => {
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "web app" ? (
+          {toggle === "web designer" ? (
             <ToggleButton
               active
-              value="web app"
-              onClick={() => setToggle("web app")}
+              value="web designer"
+              onClick={() => setToggle("web designer")}
             >
-              WEB APP'S
+              WEB DESIGNER
             </ToggleButton>
           ) : (
-            <ToggleButton value="web app" onClick={() => setToggle("web app")}>
-              WEB APP'S
+            <ToggleButton
+              value="web designer"
+              onClick={() => setToggle("web designer")}
+            >
+              WEB DESIGNER
             </ToggleButton>
           )}
           <Divider />
@@ -131,31 +135,31 @@ const Projects = ({ openModal, setOpenModal }) => {
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              ANDROID APP'S
+              ANDROID DESIGNER
             </ToggleButton>
           ) : (
             <ToggleButton
               value="android app"
               onClick={() => setToggle("android app")}
             >
-              ANDROID APP'S
+              ANDROID DESIGNER
             </ToggleButton>
           )}
           <Divider />
-          {toggle === "machine learning" ? (
+          {toggle === "dekstop application" ? (
             <ToggleButton
               active
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
+              value="dekstop application"
+              onClick={() => setToggle("dekstop application")}
             >
-              MACHINE LEARNING
+              DEKSTOP APPLICATION
             </ToggleButton>
           ) : (
             <ToggleButton
-              value="machine learning"
-              onClick={() => setToggle("machine learning")}
+              value="dekstop application"
+              onClick={() => setToggle("dekstop application")}
             >
-              MACHINE LEARNING
+              DEKSTOP APPLICATION
             </ToggleButton>
           )}
         </ToggleButtonGroup>

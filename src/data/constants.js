@@ -159,75 +159,43 @@ export const projects = [
   {
     id: 0,
     title: "Dekstop Application",
-    date: "September 2024",
+    date: "September 2024 - November 2024",
     description:
-      "Create a desktop application for hostel booking for my campus that can make it easier for students to choose the dorm room they want to stay in.",
+      "Dengan aplikasi ini siswa dapat melakukan pembookingan kamar asrama secara mudah.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-    member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],
+      "https://private-user-images.githubusercontent.com/143699287/388462867-41d58755-a832-4fb5-8b4a-1b8b2b189784.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIxODQ4ODQsIm5iZiI6MTczMjE4NDU4NCwicGF0aCI6Ii8xNDM2OTkyODcvMzg4NDYyODY3LTQxZDU4NzU1LWE4MzItNGZiNS04YjRhLTFiOGIyYjE4OTc4NC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQxMDIzMDRaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMDUyYTU5YmY3N2ZmNDQ1Njk4NDlhNzIxZGQ5MWM1YWM3MDUzOGY4NzM0ZTM3ZGFiZDA2OTRkMzQ0NzZhZWNlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.sxTYzI0oiQno1lU0b3pwl6sIZny5GFOrsoX2oDa48v8",
+    tags: ["Figma", "C#", "Github"],
+    category: "dekstop application",
   },
   {
     id: 1,
-    title: "Vexa",
-    date: "Oct 2022 - Present",
-    description:
-      "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
+    title: "Web App Designer",
+    date: "September 2024 - Oktober 2024",
+    description: "Membuat design aplikasi web dari tempat car wash.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234916413-96296f13-fe4b-4cc4-b215-e72bd7c27928.png",
-    tags: [
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-      "NodeMailer",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Project-Management-App",
-    webapp: "https://vexa-app.netlify.app/",
+      "https://private-user-images.githubusercontent.com/143699287/388462815-81c8ffe2-0776-4684-93a2-4d46e7d4705b.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIxODgzNDksIm5iZiI6MTczMjE4ODA0OSwicGF0aCI6Ii8xNDM2OTkyODcvMzg4NDYyODE1LTgxYzhmZmUyLTA3NzYtNDY4NC05M2EyLTRkNDZlN2Q0NzA1Yi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQxMTIwNDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iN2JmY2RkYTRkMTJlMjZjYWVkY2ZmNDEwZmYxOTEyMjU0ZTRhYjcwY2U5NzY3MmRkZTAwMjM2NDNjNzJkMDEwJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.po361wYEwuvuj6_f3vM4n1XRgbbm8IGt5hn5t8HjI4k",
+    tags: ["Figma", "Canfa"],
+    category: "web designer",
   },
   {
     id: 10,
-    title: "Job Finding App",
-    date: "Jun 2023 - Jul 2023",
-    description:
-      "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
+    title: "Mobile App Designer",
+    date: "Agustus 2024 - September 2024",
+    description: "Membuat design mobile dari sebuah tempat car wash.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
-    tags: ["React Native", "JavaScript", "Axios"],
+      "https://private-user-images.githubusercontent.com/143699287/388462830-7632e5ad-d3e7-4232-a34b-85dc374249f0.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIxODgzNDksIm5iZiI6MTczMjE4ODA0OSwicGF0aCI6Ii8xNDM2OTkyODcvMzg4NDYyODMwLTc2MzJlNWFkLWQzZTctNDIzMi1hMzRiLTg1ZGMzNzQyNDlmMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQxMTIwNDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03ZTliMmQwZDI0NTlhYmUxOThkZThjN2YxNmZmMmZlOTkzYjMwYTYwNTYyNWI1MDNmOTRmMzA1ZjczOWExNDJmJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.43t2TQdvgqBCDQiXqDuLqIXFHmFLmgYD4ThOflJkuV0",
+    tags: ["Figma", "Canfa"],
     category: "android app",
-    github: "https://github.com/rishavchanda/Job-finder-App",
-    webapp: "https://github.com/rishavchanda/Job-finder-App",
   },
   {
     id: 4,
-    title: "Whatsapp Clone",
-    date: "Jul 2021",
-    description:
-      "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
+    title: "Template Website",
+    date: "September 2024 - November 2024",
+    description: "Membuat template website ke firebase.",
     image:
-      "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
-    tags: ["React Js", "Firebase", "Firestore", "Node JS"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-    webapp: "https://whatsapp-clone-rishav.web.app",
+      "https://private-user-images.githubusercontent.com/143699287/388487379-83c80e1c-384b-4957-9543-26946ed7177d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzIxODkxODUsIm5iZiI6MTczMjE4ODg4NSwicGF0aCI6Ii8xNDM2OTkyODcvMzg4NDg3Mzc5LTgzYzgwZTFjLTM4NGItNDk1Ny05NTQzLTI2OTQ2ZWQ3MTc3ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMTIxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTEyMVQxMTM0NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lZDNjODg3YzA0M2Q1ZjdhYmQwNTMyOThjZGI2MTdiODVlMzZlMDgxZWNiNjIyZjJmYWI0Mzg3MTNlNzljMzVkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.p5QByqn2jdaqpygBcUtLFsD_Th2RRZlQcc4mh9SRxQg",
+    tags: ["React Js", "Firebase", "CSS", "HTML", "Github"],
+    category: "web designer",
   },
 ];
 
