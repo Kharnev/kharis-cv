@@ -29,6 +29,11 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
       },
+      {
+        name: "Git",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/640px-Git_icon.svg.png",
+      },
     ],
   },
   {
@@ -75,14 +80,14 @@ export const skills = [
           "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/640px-Logo_C_sharp.svg.png",
       },
       {
-        name: "GitHub",
+        name: "Python",
         image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Python-logo.png/640px-Python-logo.png",
       },
       {
-        name: "GitHub",
+        name: "C++",
         image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/640px-ISO_C%2B%2B_Logo.svg.png",
       },
     ],
   },
