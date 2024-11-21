@@ -3,6 +3,8 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsappIcon from "@mui/icons-material/WhatsApp";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Bio } from "../../data/constants";
+import { getDatabase, ref, onValue } from "firebase/database";
+import React, { useState, useEffect } from "react";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -83,16 +85,25 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const [Footer, setFooter] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const FooterRef = ref(db, "Footer");
+    onValue(FooterRef, (snapshot) => {
+      const data = snapshot.val();
+      setFooter(data);
+    });
+  }, []);
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Kharis Neville Awuy</Logo>
+        <Logo>{Footer.foo1}</Logo>
         <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#about">{Footer.foo2}</NavLink>
+          <NavLink href="#skills">{Footer.foo3}</NavLink>
+          <NavLink href="#experience">{Footer.foo4}</NavLink>
+          <NavLink href="#projects">{Footer.foo5}</NavLink>
+          <NavLink href="#education">{Footer.foo6}</NavLink>
         </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
@@ -105,9 +116,7 @@ function Footer() {
             <InstagramIcon />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>
-          &copy; 2024 Kharis Neville Awuy. All rights reserved.
-        </Copyright>
+        <Copyright>&copy; {Footer.foo7}</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );
