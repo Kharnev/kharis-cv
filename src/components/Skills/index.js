@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
+import { getDatabase, ref, onValue } from "firebase/database";
 
 const Container = styled.div`
   display: flex;
@@ -117,14 +118,20 @@ const SkillImage = styled.img`
 `;
 
 const Skills = () => {
+  const [Skills, setSkills] = useState({});
+  useEffect(() => {
+    const db = getDatabase();
+    const SkillsRef = ref(db, "Skills");
+    onValue(SkillsRef, (snapshot) => {
+      const data = snapshot.val();
+      setSkills(data);
+    });
+  }, []);
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>
-          Berikut adalah beberapa keterampilan yang telah saya tekuni selama 2
-          tahun terakhir.
-        </Desc>
+        <Title>{Skills.title1}</Title>
+        <Desc>{Skills.title2}</Desc>
         <SkillsContainer>
           {skills.map((skill) => (
             <Skill>
