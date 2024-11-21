@@ -132,7 +132,6 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  //hooks
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
@@ -161,7 +160,8 @@ const Contact = () => {
       <Wrapper>
         <Title>Contact</Title>
         <Desc>
-          Feel free to reach out to me for any questions or opportunities!
+          Jangan ragu untuk menghubungi saya untuk pertanyaan atau saran apa
+          pun!
         </Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
